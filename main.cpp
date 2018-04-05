@@ -56,22 +56,12 @@ int main()
         printf("\n|_______________|___________________|_______________|");
     }
     
-    printf("\nDetails after scheduling are :");
-    printf("\n\n Details entered are following:");;
-    printf("\n _______________________________________________________________________________________________");
-    printf("\n|\tPROCESS\t\t|\tARRIVAL TIME\t|\tBURST TIME\t|\tWAITING TIME  \t|\tTURN AROUND TIME  \t|");
-    printf("\n|_______________|___________________|_______________|___________________|_______________________|");
-    for(int i=0;i<n;i++)
-    {
-        printf("\n|\t\tP%d\t\t|\t\t%d\t\t\t|\t\t%d\t\t|\t\t\t%d\t\t|\t\t\t%d\t\t\t|",p[i].i,p[i].arr,p[i].burst,p[i].waitingt,p[i].turnaroundt);
-        printf("\n|_______________|___________________|_______________|___________________|_______________________|");
-    }
     int time=4,y=1;
     while(pl!=0)
     {
         for(int i=0;i<n;i++)
         {
-            if(p[i].arr==time && p[i].status==0)                                                //in the queue
+            if(p[i].arr>3 && p[i].arr<=time && p[i].status==0)                                                //in the queue
             {
                 if(start==NULL)
                 {
