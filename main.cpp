@@ -59,6 +59,8 @@ int main()
     int time=4,y=1;
     while(pl!=0)
     {
+        if(px!=0)
+        {
         for(int i=0;i<n;i++)
         {
             if(p[i].arr>3 && p[i].arr<=time && p[i].status==0)                                                //in the queue
@@ -95,6 +97,7 @@ int main()
                 }
                 px--;
             }
+        }
         }
         if(px==0 && y==1)
         {
@@ -146,7 +149,7 @@ int main()
                 {
                     run->firstt=time;
                 }
-                if(run->burl<tq)
+                if(run->burl<=tq)
                 {
                     printf("\nProcess P%d running from time= %d sec to time= %d sec.",run->i,time,time+run->burl);
                     time=time+run->burl;
@@ -160,6 +163,7 @@ int main()
                     printf("\nProcess P%d running from time= %d sec to time= %d sec.",run->i,time,time+tq);
                     time=time+tq;
                     run->burl=run->burl-tq;
+                    run->compt=time;
                     if(start==NULL)
                     {
                         cn=new node;
@@ -168,7 +172,8 @@ int main()
                         last=cn;
                         start=cn;
                     }
-                    else{
+                    else
+                    {
                         cn=new node;
                         cn->q=run;
                         node *x;
