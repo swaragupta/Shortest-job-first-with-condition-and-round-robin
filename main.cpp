@@ -1,4 +1,3 @@
-
 //
 //  main.c
 //  Shortest job first
