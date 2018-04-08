@@ -1,7 +1,6 @@
 
 //  main.c
 //  Shortest job first
-//
 //  Created by SWARA GUPTA on 18/03/18.
 //  Copyright © 2018 SWARA GUPTA. All rights reserved.
 
